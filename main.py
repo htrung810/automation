@@ -26,7 +26,3 @@ def post_light(light_on: LightOn):
     logger.info(f"Setting light to {bool(light_on.on)}")
     LIGHT_ON = bool(light_on.on)
     return LIGHT_ON
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("API_PORT", 8000)), log_level="info")
