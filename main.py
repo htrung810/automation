@@ -13,6 +13,10 @@ app = FastAPI()
 
 LIGHT_ON = False
 
+@app.get("/")
+def home():
+    return {"messenger": "By HoangTrung"}
+
 @app.get("/light")
 def get_light():
     return LIGHT_ON
